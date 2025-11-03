@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=cruelty_free" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=raven" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sound_detection_dog_barking" />
+    <title>Week 3 Homework</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+        :root {
+            --red: #FF6B6B;
+            --grey: #292F36;
+            --yellow: #F6FF96;
+            --blue: #4EA3CD;
+
+
+
+        }
+
+        * {
+            font-size: 12px;
+        }
+
+
+        /* TYPOGRAPHY */
+        h1 {
+            color: #FFF;
+            font-family: "IBM Plex Mono";
+            font-size: 5rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 5.5rem;
+        }
+
+        h2 {
+            color: #FFF;
+            font-family: "IBM Plex Mono";
+            font-size: 4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 4rem;
+        }
+
+        h3 {
+            color: #FFF;
+            font-family: "IBM Plex Mono";
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 3.5rem;
+        }
+
+        /* END TYPOGRAPHY */
+
+        /* START LAYOUT */
+
+        body {
+            background: var(--grey);
+            padding: 0px;
+            margin: 0px;
+            display: grid;
+            grid-template-columns: 25rem auto;
+            column-gap: 2rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 0px;
+            border-radius: 0 3rem 3rem 0;
+            background: white;
+
+            box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px 0 rgba(0, 0, 0, 0.30);
+            height: 99.5vh;
+        }
+        nav > ul {
+            list-style: none;
+            margin-top: 5.5rem;
+        }
+
+        nav > ul > li > a, a:visited { 
+
+            color: var(--blue);
+            font-family: "IBM Plex Sans";
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 3.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            height: 3.5rem;
+
+        }
+        nav > ul > li > a:hover { 
+            background-color: var(--grey);
+            color: #FFF;
+            font-family: "IBM Plex Sans";
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height:  60px; /* 144.444% */
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: .5rem;
+            border-radius: .25rem;
+            border-left: .5rem solid var(--red);
+            transition: all 2s;
+        }
+
+        .content {
+            display: block;
+            padding-right: 5rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template: 25rem 25rem / 50% 50%;
+            row-gap: 1.5rem;
+        }
+
+        .cards>div {
+            padding: 1.5rem;
+            font-family: "IBM Plex Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            /* 125% */
+        }
+
+        .cards>div:nth-child(even) {
+            border-radius: 0 12px 12px 0;
+        }
+        .cards >div> h3{
+            background-color: var(--grey);
+            color: white;
+            padding-left: .5rem;
+            border-radius: .25rem;
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+
+        .cards>div:nth-child(odd) {
+            border-radius: 12px 0 0 12px;
+            color: white;
+        }
+
+
+
+        #RationalNumbers {
+
+            background-color: var(--red);
+
+
+        }
+
+        #IrrationalNumbers {
+
+            background-color: white;
+
+        }
+
+        #NaturalNumbers {
+
+            background-color: var(--blue);
+        }
+
+        #Integers {
+
+            background-color: var(--yellow);
+
+        }
+
+        @media only screen AND (max-width: 480px){
+
+            body{
+               display: block;
+            }
+
+            nav{
+                position: fixed; 
+                top: 0px; 
+                left: 0px; 
+                height: 4rem; 
+                width: 100vw;
+                border-radius: 0px;
+                margin-bottom: 5rem;
+                
+
+            }
+
+            nav > ul  { 
+
+                display: flex;
+                flex-direction: row;
+                row-gap: 1rem;
+                margin-top: 0px;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0px;
+            }
+
+            nav > ul > li > a, a:visited{
+
+                font-size: 1rem;
+
+            }
+
+              nav > ul > li > a:hover{
+
+                font-size: 1rem;
+
+
+            }
+
+            .content > h1 {
+
+                margin-top: 5rem;
+            }
+
+    
+
+            .cards{
+                display: grid;
+                grid-template-columns: 100%; 
+                row-gap: 1rem;
+                width: 90vw;
+            }
+
+            .cards > div {
+                width: 100%;
+            }
+           
+        .cards>div:nth-child(even) {
+            border-radius:12px;
+          
+  
+        }
+
+        .cards>div:nth-child(odd) {
+            border-radius:12px;
+  
+        }
+       
+            
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Rational Numbers</a></li>
+            <li><a href="#">Irrational Numbers</a></li>
+            <li><a href="#">Natural Numbers</a></li>
+            <li><a href="#">Integers</a></li>
+        </ul>
+
+        <section id="avatar"></section>
+    </nav>
+
+    <section class="content">
+        <h1>Explanation of rational numbers, irrational numbers, natural numbers, and integers</h1>
+
+
+        <div class="cards">
+            <div id="RationalNumbers">
+                <h3>Rational Numbers</h3>
+                <p>A rational number is any number that can be expressed as the quotient or fraction *p/q* of two integers, where *p* (the numerator) and *q* (the denominator) are integers and *q* is not zero. This is because division by zero is undefined. Since integers can be written as a fraction with a denominator of 1 (e.g., 5 = 5/1), all integers are also rational numbers. Rational numbers can be positive, negative, or zero.</p>
+
+
+            </div>
+
+            <div id="IrrationalNumbers">
+                <h3>Irrational Numbers</h3>
+                <p>An irrational number is a real number that cannot be expressed as a simple fraction of two integers. Its decimal expansion is non-terminating and non-repeating, meaning it goes on forever without settling into a permanent repeating pattern. </p>
+            </div>
+            <div id="NaturalNumbers">
+                <h3>Natural Numbers</h3>
+                <p>Natural numbers are the set of positive integers used for counting and ordering. In mathematics, this set is often denoted as N. The most common definition includes the numbers 1, 2, 3, 4, and so on, extending infinitely. However, there is some debate; some definitions include zero (0) as a natural number, particularly in set theory and computer science. </p>
+            </div>
+            <div id="Integers">
+                <h3>Integers</h3>
+                <p>Integers encompass all whole numbers, including both positive and negative whole numbers, as well as zero. This set is denoted by the letter Z (from the German word Zahlen, meaning "numbers"). The integers can be broken down into three groups: the positive natural numbers (1, 2, 3,...), their negative counterparts (-1, -2, -3,...), and zero (0). They do not include fractions or decimals. The integers are a subset of the rational numbers.</p>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
