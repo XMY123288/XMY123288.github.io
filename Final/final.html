@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Trial of the Arrogant Black Cat</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <!--Initial problem screen-->
+        <section id="question-screen" class="screen active">
+            <h1>The Trial of the Arrogant Black Cat</h1>
+            <p>Do you think this black cat is cute?</p>
+            <img src="Mysterious Black Cat.png" alt="Mysterious Black Cat" class="cat-image">
+            <div class="buttons">
+                <button id="yes-btn" class="yes-btn">
+                    <span>✔️</span> Cute!
+                </button>
+                <button id="no-btn" class="no-btn">
+                    <span>❌</span> No Cute!
+                </button>
+            </div>
+        </section>
+
+        <!-- game screen-->
+         <section id="game-screen" class="screen">
+            <h2>The cat is angry!</h2>
+            <p>You've angered the black cat! You must guess the number (1-50) in its mind to be forgiven.</p>
+            <img src="Angry Black Cat.png" alt="Angry Black Cat" class="cat-image">
+            <div class="game-area">
+                <div class="input-group">
+                    <input type="number" id="guess-input" min="1" max="50" placeholder="Enter a number between 1-50">
+                    <button id="submit-guess" class="game-btn">Guess!</button>
+                </div>
+                <div class="feedback" id="game-feedback"></div>
+                <div class="attempts" id="attempts-count">Number of attempts: 0</div>
+            </div>
+         </section>
+
+        <!-- end screen-->
+         <section id="ending-screen" class="screen">
+            <h2 id="ending-title">END</h2>
+            <p id="ending-message"></p>
+            <img id="ending-image" src="end.png" alt="endingimage" class="cat-image">
+            <button id="restart-btn" class="restart-btn">Play again</button>
+         </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
